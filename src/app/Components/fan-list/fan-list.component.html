@@ -1,0 +1,20 @@
+<h1>Fans</h1>
+<fieldset>
+<legend><strong>Inscription</strong></legend>
+  <div>
+  <label for="nom">Votre nom : </label>
+  <input [(ngModel)]="name" type="text" name="nom">
+</div>
+<div>
+  <label for="date_de_naissance">Votre date de naissance : </label>
+  <input [(ngModel)]="birth_date" type="date" name="date_de_naissance">
+</div>
+<button type="submit">S'inscrire</button>
+</fieldset>
+
+<h3>Liste de fans</h3>
+<ul>
+  <li *ngFor="let fan of fanList">
+    <button>{{fan.name}}</button>
+  </li>
+</ul>
